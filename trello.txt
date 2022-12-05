@@ -1,2 +1,23 @@
 key: 6fea8ae8b63202f05d91f79385f23376
 token: b70db63860378bfeb0909e04dfa6bb1ed69b4afd1fbcc36c90d115c290e073bb
+
+tego co powyżej -
+
+NIE KOPIOWAC NIE KOPIOWAC NIE KOPIOWAC
+
+to są stare i złe key i token
+
+
+
+
+
+
+działających szukać w katalogu: kodilla-course albo
+skopiowane poniżej:
+
+key: 729e0e7fca16db3a7719013390b14ca5
+token: 0af59c0557610006662e6cb02a05efc7395b575b3b3009fb621bf055b557dd30
+
+board Id : 63700c9e85cdf904c6678eb7
+
+postman://auth/callback?code=d15dc41275f98b5ea185cfdcf6ed230947c6b2901ec768de01cb7747616246d4
