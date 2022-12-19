@@ -2,3 +2,27 @@ board id: 63700c9e85cdf904c6678eb7
 
 key: 729e0e7fca16db3a7719013390b14ca5
 token: 0af59c0557610006662e6cb02a05efc7395b575b3b3009fb621bf055b557dd30
+
+
+Numery identyfikacyjne list: //dlaczego dwa razy to samo?
+
+This board contains lists:
+Do zrobienia - 63700c9e85cdf904c6678ebe - false
+W trakcie - 63700c9e85cdf904c6678ebf - false
+Zrobione - 63700c9e85cdf904c6678ec0 - false
+Things to do - 63700ce1b664a900fb49d027 - false
+Things I am working on - 63700d081b081c11af3b5ad7 - false
+Things which I've done - 63700d25efdd8900c36d2962 - false
+639b7480ddf77f00fb66b2dd - test
+
+
+This board contains lists:
+63700c9e85cdf904c6678eb7 - Kodilla Application
+This board contains lists:
+Do zrobienia - 63700c9e85cdf904c6678ebe - false
+W trakcie - 63700c9e85cdf904c6678ebf - false
+Zrobione - 63700c9e85cdf904c6678ec0 - false
+Things to do - 63700ce1b664a900fb49d027 - false
+Things I am working on - 63700d081b081c11af3b5ad7 - false
+Things which I've done - 63700d25efdd8900c36d2962 - false
+639b7480ddf77f00fb66b2dd - test
