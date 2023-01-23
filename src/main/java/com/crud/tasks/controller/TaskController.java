@@ -15,7 +15,7 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/v1/tasks")
+@RequestMapping("/v1/tasks") //dodałam slash na poczatku ale nie commitowalam do Githuba
 @RequiredArgsConstructor
 public class TaskController {
 
@@ -49,7 +49,7 @@ public class TaskController {
 //    public ResponseEntity<TaskDto> updateTask(TaskDto taskDto) {
 //        return ResponseEntity.ok(new TaskDto(1L, "Edited test title", "Test content"));
 //    }
-    //metody kontrolera aby zwracaly odp opakowane wrapperem ResE (2)
+    //metody kontrolera aby zwracaly odp opakowane wrapperem ResponseEntity (2)
 
     @PutMapping
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) {
