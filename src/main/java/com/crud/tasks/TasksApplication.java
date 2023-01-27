@@ -1,10 +1,12 @@
 package com.crud.tasks;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-//@OpenAPIDefinition     Moduł 23
-
+@EnableScheduling       //Moduł 23 4
+@OpenAPIDefinition      //Moduł 23 2
 @SpringBootApplication
 public class TasksApplication {
 
