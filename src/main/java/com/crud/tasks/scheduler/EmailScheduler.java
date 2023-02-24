@@ -17,7 +17,7 @@ public class EmailScheduler {
     private final TaskRepository taskRepository;
     private final AdminConfig adminConfig;
 
-    @Scheduled (fixedDelay = 10000) /*   (cron = "0 0 10 * * *")   jeżeli chcemy kazdego dnia o 10 to cron jezeli teraz to fixedDelay   */
+//    @Scheduled (fixedDelay = 10000) /*   (cron = "0 0 10 * * *")   WYSYLA MAILE TO MAIL TRAP jeżeli chcemy kazdego dnia o 10 to cron jezeli teraz to fixedDelay   */
     public void sendInformationEmail() {
         long size = taskRepository.count();
         simpleEmailService.send(
