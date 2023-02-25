@@ -3,7 +3,6 @@ package com.crud.tasks.mapper;
 import com.crud.tasks.domain.*;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
