@@ -15,7 +15,7 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/v1/tasks") //dodałam slash na poczatku ale nie commitowalam do Githuba
+@RequestMapping("/v1/tasks")
 @RequiredArgsConstructor
 public class TaskController {
 

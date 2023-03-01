@@ -71,7 +71,6 @@ class TrelloMapperTest {
     void testMapToCardDto() {
         //Given
         TrelloMapper trelloMapper = new TrelloMapper();
-
         //When
         TrelloCard trelloCards = new TrelloCard("nameCard", "descriptionCard", "posCard", "listIdCard");
         trelloMapper.mapToCardDto(trelloCards);
@@ -86,7 +85,6 @@ class TrelloMapperTest {
     void testMapToCard() {
         //Given
         TrelloMapper trelloMapper = new TrelloMapper();
-
         //When
         TrelloCardDto trelloCardsDto = new TrelloCardDto("nameCard", "descriptionCard", "posCard", "listIdCard");
         trelloMapper.mapToCard(trelloCardsDto);
