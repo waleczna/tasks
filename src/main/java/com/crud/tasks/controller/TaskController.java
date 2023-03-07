@@ -37,7 +37,7 @@ public class TaskController {
 //    public TaskDto getTask(@PathVariable Long taskId) {
 //        return taskMapper.mapToTaskDto(service.getTask(taskId).orElse(null));
 //    }
-    // wyszukiwanie po ID (1)
+// wyszukiwanie po ID (1)
 
     @DeleteMapping(value = "{taskId}")
     public ResponseEntity<Void> deleteTask(@PathVariable Long taskId) {
@@ -49,7 +49,7 @@ public class TaskController {
 //    public ResponseEntity<TaskDto> updateTask(TaskDto taskDto) {
 //        return ResponseEntity.ok(new TaskDto(1L, "Edited test title", "Test content"));
 //    }
-    //metody kontrolera aby zwracaly odp opakowane wrapperem ResponseEntity (2)
+// metody kontrolera aby zwracaly odp opakowane wrapperem ResponseEntity (2)
 
     @PutMapping
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) {

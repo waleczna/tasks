@@ -13,7 +13,9 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -23,8 +25,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @SpringJUnitWebConfig
 @WebMvcTest(TaskController.class)
@@ -85,11 +86,11 @@ class TaskControllerTest {
                         .delete("/v1/tasks/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().is(200));
-        Mockito.verify(service, times(1)).deleteTask(1L);
+        verify(service, times(1)).deleteTask(1L);
     }
 
     @Test
-    void shouldCreateTrelloCard() throws Exception {
+    void shouldUpdateTask() throws Exception { //zmiana nazwy
         // Given
         Task task = new Task(1l, "title", "content");
         TaskDto taskDto = new TaskDto(1l, "title", "content");
@@ -107,6 +108,24 @@ class TaskControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id", Matchers.is(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.title", Matchers.is("title")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.content", Matchers.is("content")));
-        Mockito.verify(service, times(1)).saveTask(any());
+        verify(service, times(1)).saveTask(any());
+    }
+    @Test //CHAT GPT ;)
+    void shouldCreateTask() throws Exception {
+        // Given
+        Task task = new Task(1l, "title", "content");
+        TaskDto taskDto = new TaskDto(1l, "title", "content");
+        when(taskMapper.mapToTask(any())).thenReturn(task);
+        Gson gson = new Gson();
+        String jsonContent = gson.toJson(taskDto);
+        //When & Then
+        mockMvc
+                .perform(MockMvcRequestBuilders
+                        .post("/v1/tasks")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding("UTF-8")
+                        .content(jsonContent))
+                .andExpect(MockMvcResultMatchers.status().is(200));;
+        verify(service, times(1)).saveTask(any());
     }
 }
