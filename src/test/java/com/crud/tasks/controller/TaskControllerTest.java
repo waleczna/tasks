@@ -104,7 +104,7 @@ class TaskControllerTest {
         verify(service, times(1)).saveTask(any());
     }
 
-    @Test //CHAT GPT ;)
+    @Test
     void shouldCreateTask() throws Exception {
         // Given
         Task task = new Task(1l, "title", "content");
@@ -119,7 +119,7 @@ class TaskControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .characterEncoding("UTF-8")
                         .content(jsonContent))
-                .andExpect(MockMvcResultMatchers.status().is(200));;
+                .andExpect(MockMvcResultMatchers.status().is(200));
         verify(service, times(1)).saveTask(any());
     }
 }
